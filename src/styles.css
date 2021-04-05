@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: #efefef;
+}
+
+.main-container{
+    max-width: 1440px;
+    padding: 10px;
+    margin: auto;
+}
+
+.inner-container{
+    display: flex;
+}
+
+.left-container{
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 5px;
+}
+
+.right-container{
+    background-color: #efefef;
+    padding: 0 10px 10px 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.left-container{
+    width: 18%;
+    border-radius: 5px;
+}
+
+.right-container{
+    width: 77%;
+}
+
+@media only screen and (max-width: 700px) {
+    .inner-container{
+        display: block;
+    }
+
+    .left-container{
+        width: 95%;
+    }
+    
+    .right-container{
+        width: 95%;
+    }
+}
+

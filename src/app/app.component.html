@@ -1,0 +1,94 @@
+<div class="main-container">
+  <h1>{{title}}</h1>
+
+  <div class="inner-container">
+    <div class="left-container">
+      <h3>Filters</h3>
+      <p style="text-align: center; border-bottom:1px solid #CCC;">Launch Year</p>
+
+      <button class="year-filter-btn" *ngFor="let year of yearList" (click)="onSelectYear(year)">{{year}}</button>
+
+      <p style="text-align: center; border-bottom:1px solid #CCC;">
+        Successfull Launch
+      </p>
+
+      <button class="year-filter-btn" (click)="onSuccessfullLaunch(true)">
+        {{'True'}}
+      </button>
+      <button class="year-filter-btn" (click)="onSuccessfullLaunch(false)">
+        {{'False'}}
+      </button>
+
+      <p style="text-align: center; border-bottom:1px solid #CCC;">
+        Successfull Landing
+      </p>
+
+      <button class="year-filter-btn" (click)="onSuccessfullLanding(true)">
+        {{'True'}}
+      </button>
+      <button class="year-filter-btn" (click)="onSuccessfullLanding(false)">
+        {{'False'}}
+      </button>
+    </div>
+
+    <div class="right-container">
+      <div class="cards" *ngFor="let record of gridData">
+        <img [src]="record.links.mission_patch_small" />
+        <div class="cards-content">
+          <h4>{{record.mission_name}} #{{record.flight_number}}</h4>
+          <label>Mission Id: </label>
+          <span *ngFor="let missionId of record.mission_id">
+            {{missionId}} &nbsp;
+          </span>
+          <p>
+            <label>Launch Year: </label> {{record.launch_year}}
+          </p>
+          <p>
+            <label>Launch Success: </label> {{record.launch_success}}
+          </p>
+          <p>
+            <label>Launch Landing: </label> {{record.launch_landing}}
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="cards">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Falcon_9_flight_26.png" />
+      <div class="cards-content">
+        <h3>Falcon#1</h3>
+        <label>Mission Id: </label> #0001
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Falcon_9_flight_26.png" />
+      <div class="cards-content">
+        <h3>Falcon#1</h3>
+        <label>Mission Id: </label> #0001
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Falcon_9_flight_26.png" />
+      <div class="cards-content">
+        <h3>Falcon#1</h3>
+        <label>Mission Id: </label> #0001
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Falcon_9_flight_26.png" />
+      <div class="cards-content">
+        <h3>Falcon#1</h3>
+        <label>Mission Id: </label> #0001
+      </div>
+    </div> -->
+
+
+    </div>
+  </div>
+
+</div>
+
+
+<router-outlet></router-outlet>

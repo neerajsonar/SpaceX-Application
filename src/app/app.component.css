@@ -1,0 +1,47 @@
+.year-filter-btn{
+    background-color: lightgreen;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid lightgreen;
+    cursor: pointer;
+    width: 45%;
+    margin: 5px;
+    display: inline-block;
+}
+
+.cards{
+    width: 20%;
+    padding: 5px;
+    margin:5px;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.cards img{
+    background: #efefef;
+    height: 90%;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-content{
+    padding: 10px 5px;
+}
+
+.cards-content h4{
+    color: blue;
+}
+
+.cards-content label{
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .cards{
+        width: 95%;
+    }
+}
